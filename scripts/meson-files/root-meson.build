@@ -1,0 +1,18 @@
+project('WalnutApp', 'cpp',
+          version: '0.1.0',
+    meson_version: '>= 0.53.0',
+  default_options: [ 'warning_level=2',
+                     'cpp_std=c++17',
+                   ],
+)
+
+add_project_arguments([
+  '-I' + meson.current_source_dir() + '/Walnut/vendor/GLFW/include',
+  '-I' + meson.current_source_dir() + '/Walnut/vendor/glm',
+  '-I' + meson.current_source_dir() + '/Walnut/vendor/imgui',
+  '-I' + meson.current_source_dir() + '/Walnut/vendor/stb_image',
+  '-I' + meson.current_source_dir() + '/Walnut/Walnut/src',
+  '-DWL_PLATFORM_WINDOWS'
+], language: 'cpp')
+
+subdir('WalnutApp')

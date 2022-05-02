@@ -9,5 +9,12 @@ bin-int/
 *.vcxproj.filters
 *.sln
 
+# Gnome Builder config file
+.buildconfig
+
+# meson files
+meson.build
+WalnutApp/meson.build
+
 # Exclude
 !vendor/bin
